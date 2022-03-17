@@ -1,0 +1,122 @@
+@import '@styles/vars.scss';
+
+.__main {
+	@include flex-center;
+	// height: 700px;
+	margin: 10rem auto;
+	// background-color: aqua;
+	overflow: hidden;
+	.container {
+		@include flex-center;
+		flex-direction: column;
+		gap: 2rem;
+		width: 100%;
+		overflow: hidden;
+		.heading {
+			@include flex-center;
+			h1 {
+				text-transform: uppercase;
+				font-family: $font-family-silver-south;
+			}
+		}
+		.graphics {
+			@include flex-center;
+			height: 520px;
+			width: 100%;
+			background-image: url('/images/newsletter.jpg');
+			background-size: cover;
+			background-color: red;
+			position: relative;
+			.overlay {
+				@include flex-center;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba(0, 0, 0, 0.6);
+				h1 {
+					font-family: $font-family-silver-south;
+					text-transform: uppercase;
+
+					text-align: center;
+					color: #222;
+				}
+			}
+			.form {
+				h2 {
+					font-weight: normal;
+				}
+				z-index: 1;
+				color: #fff;
+				@include flex-center;
+				flex-direction: column;
+				// gap: 3rem;
+				input {
+					background: transparent;
+					border: 1px solid #fff;
+					font-size: 1.2rem;
+					line-height: 6;
+					width: calc(100% + 200px);
+					text-align: center;
+					color: #fff;
+					outline: none;
+					margin-top: 12rem;
+					font-style: italic;
+				}
+				button {
+					border: none;
+					background: transparent;
+					text-transform: uppercase;
+					cursor: pointer;
+					font-size: 1.2rem;
+					color: #fff;
+					margin-top: 2rem;
+				}
+			}
+		}
+		.social {
+			@include flex-center;
+			flex-direction: row;
+			gap: 1rem;
+			font-size: 2rem;
+		}
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.__main {
+		.container {
+			.overlay {
+				h1 {
+					font-size: 6rem;
+				}
+			}
+			.graphics {
+				.form {
+					input {
+						width: calc(100%);
+						line-height: 4;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 970px) {
+	.__main {
+		.container {
+			width: 1100px;
+			max-width: 100%;
+			.graphics {
+				height: 650px;
+			}
+			.overlay {
+				h1 {
+					font-size: 13.13rem;
+				}
+			}
+		}
+	}
+}

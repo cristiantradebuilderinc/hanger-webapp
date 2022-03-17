@@ -1,0 +1,23 @@
+@import '@styles/vars.scss';
+
+.__main {
+	.large {
+		height: 300px;
+		background-color: #000;
+		background-image: url('/logo/hanger-logo.svg');
+		background-repeat: repeat;
+		background-size: 92px;
+	}
+	.small {
+		height: 60px;
+		background-color: $lotus;
+	}
+}
+
+@media screen and (min-width: 970px) {
+	.__main {
+		.large {
+			height: 500px;
+		}
+	}
+}

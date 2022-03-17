@@ -1,0 +1,22 @@
+$lotus: #5364fc;
+$royal: #3a275e;
+$polar: #ffffff;
+$coin: #dcdde7;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@font-face {
+	font-family: 'SilverSouthSerif';
+	src: url('../assets/fonts/SilverSouthSerif.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+$font-family: 'Montserrat', sans-serif;
+$font-family-silver-south: 'SilverSouthSerif', sans-serif;
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

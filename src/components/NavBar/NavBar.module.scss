@@ -1,0 +1,80 @@
+@import '@styles/vars.scss';
+
+$height: 90px;
+
+.__main {
+	height: $height;
+	display: grid;
+	grid-template-areas: 'mobileMenuBtn logo';
+	grid-auto-columns: 100px 1fr;
+	font-size: 0.8rem;
+	font-weight: 600;
+	.mobileMenuBtn {
+		grid-area: mobileMenuBtn;
+		font-size: 2rem;
+		align-content: center;
+		justify-content: left;
+		display: flex;
+		align-items: center;
+		padding-left: 2rem;
+	}
+	.logoArea {
+		padding-left: 0rem;
+		grid-area: logo;
+		@include flex-center;
+		justify-content: flex-start;
+		.logo {
+			height: 40px;
+		}
+	}
+	.menuArea {
+		display: none;
+	}
+	.rightMenuArea {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 970px) {
+	.__main {
+		grid-template-areas: 'logo menu rightMenu';
+		grid-auto-columns: 200px 1fr 150px;
+		.logoArea {
+			margin-top: 0;
+			padding-left: 1rem;
+		}
+		.menuArea {
+			grid-area: menu;
+			gap: 1rem;
+			@include flex-center;
+		}
+		.rightMenuArea {
+			grid-area: rightMenu;
+			@include flex-center;
+		}
+		.mobileMenuBtn {
+			display: none;
+		}
+	}
+}
+
+.mobileMenu {
+	background-color: rgba(255, 255, 255, 0.97);
+	height: 100vh;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 999;
+	width: 100%;
+	display: flex;
+	@include flex-center;
+	flex-direction: column;
+	gap: 2rem;
+	.closeMobileMenu {
+		font-size: 3rem;
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+}

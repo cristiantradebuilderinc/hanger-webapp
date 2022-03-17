@@ -1,0 +1,74 @@
+@import '@styles/vars.scss';
+
+.__main {
+	@include flex-center;
+	// height: 700px;
+	margin: 5rem auto 10rem auto;
+	// background-color: aqua;
+	overflow: hidden;
+	.container {
+		@include flex-center;
+		flex-direction: column;
+		gap: 2rem;
+		width: 100%;
+		overflow: hidden;
+		.heading {
+			@include flex-center;
+			h1 {
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+		}
+		.graphics {
+			@include flex-center;
+			height: 520px;
+			width: 100%;
+			background-image: url('/images/collaborate.jpg');
+			background-size: cover;
+			background-color: red;
+			position: relative;
+			.overlay {
+				@include flex-center;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba(0, 0, 0, 0.6);
+				h1 {
+					font-family: $font-family-silver-south;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.__main {
+		.container {
+			.overlay {
+				h1 {
+					font-size: 12vw;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 970px) {
+	.__main {
+		.container {
+			width: 1100px;
+			max-width: 100%;
+			.graphics {
+				height: 650px;
+			}
+			.overlay {
+				h1 {
+					font-size: 7rem;
+				}
+			}
+		}
+	}
+}

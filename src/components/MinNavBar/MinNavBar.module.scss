@@ -1,0 +1,28 @@
+.__main {
+	display: flex;
+	background-color: black;
+	color: #fff;
+	height: 70px;
+	align-items: center;
+	justify-content: center;
+	flex-flow: row;
+	justify-content: center;
+	padding: 0rem;
+	gap: 2rem;
+	a {
+		display: flex;
+		text-transform: uppercase;
+		font-size: 0.6rem;
+		font-weight: 600;
+	}
+}
+
+@media screen and (min-width: 970px) {
+	.__main {
+		justify-content: flex-end;
+		padding: 0 5rem;
+		a {
+			font-size: 0.7rem;
+		}
+	}
+}

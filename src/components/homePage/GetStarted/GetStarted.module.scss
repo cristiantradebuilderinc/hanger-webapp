@@ -1,0 +1,58 @@
+@import '@styles/vars.scss';
+
+.__main {
+	height: 650px;
+	background-color: antiquewhite;
+	background-image: url('/images/get-started.jpg');
+	background-size: cover;
+	flex-direction: column;
+	overflow: hidden;
+	@include flex-center;
+	position: relative;
+	.overlay {
+		@include flex-center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		h1 {
+			font-family: $font-family-silver-south;
+			color: #ffffff;
+		}
+	}
+	.message {
+		text-align: center;
+		h1 {
+			font-family: $font-family-silver-south;
+			font-size: 6rem;
+		}
+		h2 {
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			color: #fff;
+			margin-top: 5rem;
+		}
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.__main {
+		.message {
+			h1 {
+				font-size: 12vw;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 970px) {
+	.__main {
+		.message {
+			h1 {
+				font-size: 6rem;
+			}
+		}
+	}
+}
