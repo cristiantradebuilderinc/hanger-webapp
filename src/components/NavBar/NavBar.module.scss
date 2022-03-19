@@ -1,13 +1,13 @@
 @import '@styles/vars.scss';
 
-$height: 90px;
+$height: 80px;
 
 .__main {
 	height: $height;
 	display: grid;
 	grid-template-areas: 'mobileMenuBtn logo';
 	grid-auto-columns: 100px 1fr;
-	font-size: 0.8rem;
+	font-size: 0.86rem;
 	font-weight: 600;
 	.mobileMenuBtn {
 		grid-area: mobileMenuBtn;
@@ -35,7 +35,7 @@ $height: 90px;
 	}
 }
 
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 1030px) {
 	.__main {
 		grid-template-areas: 'logo menu rightMenu';
 		grid-auto-columns: 200px 1fr 150px;
@@ -45,7 +45,7 @@ $height: 90px;
 		}
 		.menuArea {
 			grid-area: menu;
-			gap: 1rem;
+			gap: 2rem;
 			@include flex-center;
 		}
 		.rightMenuArea {
